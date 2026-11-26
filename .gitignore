@@ -1,0 +1,39 @@
+# ============================================================
+# SecurPrint — .gitignore
+# Blocks secrets, enrolled biometric data, and Python artifacts.
+# ============================================================
+
+# --- Secrets & environment ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# --- Biometric data — NEVER commit enrolled templates or vault material ---
+*.db
+*.sqlite
+*.sqlite3
+*.bin
+local_fragment_a.bin
+biometrics.db
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
